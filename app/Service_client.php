@@ -11,4 +11,9 @@ class Service_client extends Model
   protected $table    = "services_clients";
   protected $fillable = ['name','description'];
   protected $dates    = ['deleted_at'];
+
+  public function clients(){
+    return $this->belognsToMany('App\Client')->withTimestamps();
+  }
+
 }

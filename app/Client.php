@@ -18,4 +18,18 @@ class Client extends Model
         'slug' => ['source' => 'title']
       ]
     }
+    public function files(){
+      return $this->hasMany('App\File');
+    }
+    public function services_clients(){
+      return $this->belognsToMany('App\Service_client')->withTimestamps();
+    }
+
+    public function category_client(){
+      return $this->belongsTo('App\category_client');
+    }
+
+    public function status_client(){
+      return $this->belongsTo('App\Status_client');
+    }
 }

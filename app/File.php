@@ -13,4 +13,10 @@ class File extends Model
     	'name','description','client_id'
     ];
     protected $dates = ['deleted_at'];
+    public function client(){
+      return $this->belongsTo('App\Client');
+    }
+    public function files_descriptions(){
+      return $this->hasMany('App\File_description');
+    }
 }

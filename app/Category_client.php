@@ -11,4 +11,8 @@ class Category_client extends Model
     protected $table    = "category_clients";
     protected $fillable = ['name'];
     protected $dates    = ['deleted_at'];
+
+    public function clients(){
+      return $this->hasMany('App\Client');
+    }
 }

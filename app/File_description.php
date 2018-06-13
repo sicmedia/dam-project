@@ -11,4 +11,9 @@ class File_description extends Model
     protected $fillable = ['name','path',
     'size','extention','file_id'];
     protected $dates = ['deleted_at'];
+
+    public function file(){
+      return $this->belongsTo('App\File');
+    }
+
 }

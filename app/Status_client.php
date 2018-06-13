@@ -11,4 +11,9 @@ class Status_client extends Model
   protected $table    = "status_clients";
   protected $fillable = ['name'];
   protected $dates    = ['deleted_at'];
+
+  public function clients(){
+    return $this->hasMany('App\Client');
+  }
+  
 }
