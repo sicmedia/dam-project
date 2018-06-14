@@ -23,9 +23,9 @@ class ClientController extends Controller {
 
     /*
     $fileName = time().'.txt'; // generate unique name.
-    $res = Storage::disk('do_spaces')->put($fileName, 'Hi…');
-    Storage::disk('do_spaces')->setVisibility($fileName, 'public'); // Set the visibility to public.
-    $url = Storage::disk('do_spaces')->url($fileName);
+    $res = Storage::disk('spaces')->put($fileName, 'Hi…');
+    Storage::disk('spaces')->setVisibility($fileName, 'public'); // Set the visibility to public.
+    $url = Storage::disk('spaces')->url($fileName);
     return Response::json(['success' => true, 'response' => $url]);
 
 
