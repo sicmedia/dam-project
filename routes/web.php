@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/{client_name}', 'ClientController@show');
+
+Route::resource('client', 'ClientController');

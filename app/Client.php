@@ -3,10 +3,13 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Cviebrock\EloquentSluggable\Sluggable;
+
 class Client extends Model
 {
     use Sluggable;
     use SoftDeletes;
+
     protected $table = "clients";
     protected $fillable = [
     'name','description','category_client_id',
@@ -15,9 +18,10 @@ class Client extends Model
 
     public function sluggable(){
       return [
-        'slug' => ['source' => 'title']
-      ]
+        'slug' => ['source' => 'name']
+      ];
     }
+    
     public function files(){
       return $this->hasMany('App\File');
     }

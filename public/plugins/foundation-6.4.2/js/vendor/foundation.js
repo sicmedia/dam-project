@@ -83,9 +83,6 @@ module.exports = jQuery;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
-
-
-
 // Core Foundation Utilities, utilized in a number of places.
 
 /**
