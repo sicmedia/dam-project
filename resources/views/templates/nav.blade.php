@@ -2,7 +2,8 @@
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
       <h4 class="text-white">Data Access Management</h4>
-      <span class="text-muted"> Data access management with spaces objects -> DO.</span>
+      <span class="text-muted"> Data access management with spaces objects -> DO.
+      <span class="badge badge-success">¡New!</span></span>
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">

@@ -125,6 +125,7 @@ class ComposerStaticInit4f71105732104b8283bc2d489355f8d3
             'Collective\\Html\\' => 16,
             'Cocur\\Slugify\\' => 14,
             'Carbon\\' => 7,
+            'Caffeinated\\Flash\\' => 18,
         ),
         'A' => 
         array (
@@ -331,6 +332,10 @@ class ComposerStaticInit4f71105732104b8283bc2d489355f8d3
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
+        'Caffeinated\\Flash\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/caffeinated/flash/src',
         ),
         'Aws\\' => 
         array (
@@ -854,6 +859,11 @@ class ComposerStaticInit4f71105732104b8283bc2d489355f8d3
         'Aws\\WrappedHttpHandler' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/WrappedHttpHandler.php',
         'Aws\\XRay\\Exception\\XRayException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/XRay/Exception/XRayException.php',
         'Aws\\XRay\\XRayClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/XRay/XRayClient.php',
+        'Caffeinated\\Flash\\Facades\\Flash' => __DIR__ . '/..' . '/caffeinated/flash/src/Facades/Flash.php',
+        'Caffeinated\\Flash\\FlashHandler' => __DIR__ . '/..' . '/caffeinated/flash/src/FlashHandler.php',
+        'Caffeinated\\Flash\\FlashServiceProvider' => __DIR__ . '/..' . '/caffeinated/flash/src/FlashServiceProvider.php',
+        'Caffeinated\\Flash\\LaravelSessionStore' => __DIR__ . '/..' . '/caffeinated/flash/src/LaravelSessionStore.php',
+        'Caffeinated\\Flash\\SessionStore' => __DIR__ . '/..' . '/caffeinated/flash/src/SessionStore.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
