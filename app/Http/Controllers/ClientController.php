@@ -51,10 +51,8 @@ class ClientController extends Controller {
 
     if($request->file('upload_file')) {
         $file = $request->file('upload_file');
-        $name = $request->client_name.'_' . $client->value('id') . '-' .
         $size = \File::size($file);
-
-         time() . '.' . $file->getClientOriginalExtension();
+        $name = $request->client_name.'_' . $client->value('id') . '-' . time() . '.' . $file->getClientOriginalExtension();
         Storage::disk('spaces')->putFile('dam-project/'.$client_name, $name, 'public');
 
         $file = new File();
