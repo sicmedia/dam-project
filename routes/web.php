@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('welcome');
 });
 
-Route::get('dashboard/{client_name}', 'ClientController@show');
-Route::resource('clients', 'ClientController');
+
+Route::get('dashboard/clients/{client_name}',
+['as' => 'dashboard.show_client','uses' => 'ClientController@show']);
+Route::resource('dashboard/clients', 'ClientController');

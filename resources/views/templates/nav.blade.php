@@ -6,11 +6,12 @@
       <span class="badge badge-success">¡New!</span></span>
     </div>
   </div>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark bg-dark" style="padding: 1%;">
     <button class="navbar-toggler" type="button" data-toggle="collapse"
     data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
     aria-expanded="true" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <p class="p-navbar-text">@yield('title_nav','')</p>
   </nav>
 </div>
