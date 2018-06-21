@@ -30,14 +30,64 @@
       Add your first file
     </button>
   @else
+    <br/>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadFileModal">
       Add a new file
     </button>
+
+    <br/><br/>
+
+    <div class="panel-body">
+      <table class="table ">
+        <tbody>
+          @foreach($files as $file)
+            <tr>
+              @foreach($file->files_descriptions as $document)
+                <td>
+                  @if($document->extention == 'pdf')
+                    <i class="far fa-file-pdf"></i>
+                  @elseif($document->extention == "png" || $document->extention == "jpg")
+                    <i class="far fa-file-image"></i>
+                  @elseif($document->extention == "doc" || $document->extention == "docx")
+                    <i class="far fa-file-word"></i>
+                  @endif
+                </td>
+                <td>{{$document->name}}</td>
+                <td>
+                  <span class="pull-right text-muted small"><em>{{ $file->created_at }}</em></span>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <a class="btn btn-primary"
+                  href="{{$document->end_point.$document->bucket_name.$document->path.$document->name}}"
+                  download="{{$document->name}}"><i class="fas fa-download"></i></a>
+									<a class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+                  <a class="btn btn-info" onclick="copyText()"><i class="fas fa-share-alt-square"></i></a>
+                </td>
+              @endforeach
+            </tr>
+          @endforeach
+        </tbody>
+      </table>
+    </div>
+
   @endif
 
 </div>
 
 <br/>
+
+@section('js')
+<script type="text/javascript">
+  function copyText() {
+    var copyText = document.getElementById("link_to_share");
+    copyText.select();
+    document.execCommand("copy");
+    alert("Copied the text: " + copyText.value);
+  }
+</script>
+@endsection
 
 
 <!-- Modal -->
@@ -50,6 +100,8 @@ tabindex="-1" role="dialog" aria-labelledby="uploadFile" aria-hidden="true">
        'enctype' => 'multipart/form-data', 'files' => true, 'method' => 'POST']) !!}
 
         <div class="modal-body">
+          <p> Route -> dam-project/{{$client_name}}/ </p>
+
           <input type="hidden" name="client_name" value="{{$client_name}}"/>
           <div class="form-group">
            <input type="file" name="upload_file" class="form-control-file" required>

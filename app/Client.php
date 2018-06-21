@@ -21,7 +21,7 @@ class Client extends Model
         'slug' => ['source' => 'name']
       ];
     }
-    
+
     public function files(){
       return $this->hasMany('App\File');
     }
@@ -30,7 +30,7 @@ class Client extends Model
     }
 
     public function category_client(){
-      return $this->belongsTo('App\category_client');
+      return $this->belongsTo('App\Category_client');
     }
 
     public function status_client(){
